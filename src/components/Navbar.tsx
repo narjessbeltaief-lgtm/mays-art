@@ -10,7 +10,7 @@ import Image from 'next/image';
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [showAccount, setShowAccount] = useState(false)
-  const { data: session } = useSession()
+  const { data: session, status } = useSession()
   const accountBtnRef = useRef<HTMLButtonElement>(null)
 
   return (
